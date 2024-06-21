@@ -19,6 +19,7 @@ META.yml
 README
 share/bibframe2marc.xsl
 share/INFO
+SIGNATURE
 t/NKC-Transform-BIBFRAME2MARC/01-use.t
 t/NKC-Transform-BIBFRAME2MARC/02-version.t
 xt/NKC-Transform-BIBFRAME2MARC/01-pod_coverage.t
