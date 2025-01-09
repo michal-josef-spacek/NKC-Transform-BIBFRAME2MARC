@@ -18,6 +18,9 @@ MANIFEST			This list of files
 META.yml
 README
 share/bibframe2marc-2.6.0.xsl
+share/bibframe2marc-2.7.0.xsl
+share/bibframe2marc-2.8.0.xsl
+share/bibframe2marc-2.8.1.xsl
 share/INFO
 SIGNATURE
 t/NKC-Transform-BIBFRAME2MARC/01-use.t
