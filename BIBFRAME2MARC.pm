@@ -19,7 +19,7 @@ sub new {
 
 	# XSLT transformation file.
 	$self->{'xslt_transformation_file'} = dist_file('NKC-Transform-BIBFRAME2MARC',
-		'bibframe2marc.xsl');
+		'bibframe2marc-2.6.0.xsl');
 
 	# Process parameters.
 	set_params($self, @params);
