@@ -19,6 +19,7 @@ name 'NKC-Transform-BIBFRAME2MARC';
 readme_from 'BIBFRAME2MARC.pm';
 recursive_author_tests('xt');
 requires 'Class::Utils' => 0;
+requires 'Error::Pure' => 0;
 requires 'File::Share' => 0;
 requires 'XML::LibXML' => 0;
 requires 'XML::LibXSLT' => 0;
