@@ -29,6 +29,10 @@ sub new {
 	return $self;
 }
 
+sub version {
+	return '2.6';
+}
+
 sub transform {
 	my ($self, $marc_xml) = @_;
 

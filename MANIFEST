@@ -23,5 +23,6 @@ SIGNATURE
 t/NKC-Transform-BIBFRAME2MARC/01-use.t
 t/NKC-Transform-BIBFRAME2MARC/02-version.t
 t/NKC-Transform-BIBFRAME2MARC/03-new.t
+t/NKC-Transform-BIBFRAME2MARC/04-version.t
 xt/NKC-Transform-BIBFRAME2MARC/01-pod_coverage.t
 xt/NKC-Transform-BIBFRAME2MARC/02-pod.t
