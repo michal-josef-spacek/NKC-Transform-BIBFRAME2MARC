@@ -1,4 +1,5 @@
 BIBFRAME2MARC.pm
+BIBFRAME2MARC/Utils.pm
 Changes
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
@@ -23,9 +24,14 @@ share/bibframe2marc-2.8.0.xsl
 share/bibframe2marc-2.8.1.xsl
 share/INFO
 SIGNATURE
+t/NKC-Transform-BIBFRAME2MARC-Utils/01-use.t
+t/NKC-Transform-BIBFRAME2MARC-Utils/02-version.t
+t/NKC-Transform-BIBFRAME2MARC-Utils/03-list_versions.t
 t/NKC-Transform-BIBFRAME2MARC/01-use.t
 t/NKC-Transform-BIBFRAME2MARC/02-version.t
 t/NKC-Transform-BIBFRAME2MARC/03-new.t
 t/NKC-Transform-BIBFRAME2MARC/04-version.t
+xt/NKC-Transform-BIBFRAME2MARC-Utils/01-pod_coverage.t
+xt/NKC-Transform-BIBFRAME2MARC-Utils/02-pod.t
 xt/NKC-Transform-BIBFRAME2MARC/01-pod_coverage.t
 xt/NKC-Transform-BIBFRAME2MARC/02-pod.t
