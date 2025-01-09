@@ -17,12 +17,22 @@ sub new {
 	# Create object.
 	my $self = bless {}, $class;
 
+	# Version of transformation.
+	$self->{'version'} = '2.6.0';
+
 	# XSLT transformation file.
-	$self->{'xslt_transformation_file'} = dist_file('NKC-Transform-BIBFRAME2MARC',
-		'bibframe2marc-2.6.0.xsl');
+	$self->{'xslt_transformation_file'} = undef;
 
 	# Process parameters.
 	set_params($self, @params);
+
+	if (! defined $self->{'xslt_transformation_file'}) {
+		if (! defined $self->{'version'}) {
+			err 'Parameter version is undefined.';
+		}
+		$self->{'xslt_transformation_file'} = dist_file('NKC-Transform-BIBFRAME2MARC',
+			'bibframe2marc-'.$self->{'version'}.'.xsl');
+	}
 
 	if (! -r $self->{'xslt_transformation_file'}) {
 		err "Cannot read XSLT file.",

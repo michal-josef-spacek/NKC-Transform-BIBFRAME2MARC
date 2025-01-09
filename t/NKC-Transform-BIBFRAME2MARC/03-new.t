@@ -2,9 +2,9 @@ use strict;
 use warnings;
 
 use English;
-use Error::Pure::Utils qw(clean);
+use Error::Pure::Utils qw(clean err_msg_hr);
 use NKC::Transform::BIBFRAME2MARC;
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 6;
 use Test::NoWarnings;
 
 # Test.
@@ -19,4 +19,19 @@ eval {
 };
 is($EVAL_ERROR, "Cannot read XSLT file.\n",
 	"Cannot read XSLT file.");
+my $err_msg_hr = err_msg_hr(0);
+is($err_msg_hr->{'XSLT file'}, 'bad', "Error 'XSLT file' parameter (bad)");
+clean();
+
+# Test.
+eval {
+	NKC::Transform::BIBFRAME2MARC->new(
+		'version' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Cannot read XSLT file.\n",
+	"Cannot read XSLT file.");
+$err_msg_hr = err_msg_hr(0);
+like($err_msg_hr->{'XSLT file'}, qr{NKC-Transform-BIBFRAME2MARC/bibframe2marc-bad\.xsl$},
+	"Error 'XSLT file' parameter (.. NKC-Transform-BIBFRAME2MARC/bibframe2marc-bad.xsl)");
 clean();
