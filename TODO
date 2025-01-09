@@ -1,11 +1,13 @@
 TODO
 ====
 1. Doc
-2. Tests.
 3. license CC0 + BSD.
 5.
 
 Applied
 =======
 4. Implement Utils.pm with list_versions() function.
+OK [20250109] skim
+
+2. Tests.
 OK [20250109] skim

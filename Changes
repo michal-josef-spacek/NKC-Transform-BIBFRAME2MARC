@@ -4,6 +4,7 @@
  - Add check for XSLT file in input.
  - Add constructor test.
  - Add version() method.
+ - Add tests for transform().
  - Add 'version' parameter.
  - Update copyright years.
 
