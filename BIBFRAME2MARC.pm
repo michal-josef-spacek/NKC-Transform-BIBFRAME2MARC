@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Class::Utils qw(set_params);
+use Error::Pure qw(err);
 use File::Share ':all';
 use XML::LibXML;
 use XML::LibXSLT;
@@ -22,6 +23,12 @@ sub new {
 
 	# Process parameters.
 	set_params($self, @params);
+
+	if (! -r $self->{'xslt_transformation_file'}) {
+		err "Cannot read XSLT file.",
+			'XSLT file', $self->{'xslt_transformation_file'},
+		;
+	}
 
 	$self->{'_xml_parser'} = XML::LibXML->new;
 	$self->{'_xslt'} = XML::LibXSLT->new;
