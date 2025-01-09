@@ -30,7 +30,15 @@ sub new {
 }
 
 sub version {
-	return '2.6';
+	my $self = shift;
+
+	my $dom = $self->{'_xml_parser'}->load_xml('location' => $self->{'xslt_transformation_file'});
+
+	my $version = $dom->findvalue('//xsl:variable[@name="vCurrentVersion"]');
+	$version =~ s/\s*DLC\s+bibframe2marc\s*//ms;
+	$version =~ s/^v//ms;
+
+	return $version;
 }
 
 sub transform {
