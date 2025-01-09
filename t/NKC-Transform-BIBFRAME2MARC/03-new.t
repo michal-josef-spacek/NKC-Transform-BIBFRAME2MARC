@@ -32,6 +32,6 @@ eval {
 is($EVAL_ERROR, "Cannot read XSLT file.\n",
 	"Cannot read XSLT file.");
 $err_msg_hr = err_msg_hr(0);
-like($err_msg_hr->{'XSLT file'}, qr{NKC-Transform-BIBFRAME2MARC/bibframe2marc-bad\.xsl$},
-	"Error 'XSLT file' parameter (.. NKC-Transform-BIBFRAME2MARC/bibframe2marc-bad.xsl)");
+like($err_msg_hr->{'XSLT file'}, qr{bibframe2marc-bad\.xsl$},
+	"Error 'XSLT file' parameter (.. bibframe2marc-bad.xsl)");
 clean();
