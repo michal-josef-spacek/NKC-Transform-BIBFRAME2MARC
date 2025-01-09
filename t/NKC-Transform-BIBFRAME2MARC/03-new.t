@@ -4,7 +4,7 @@ use warnings;
 use English;
 use Error::Pure::Utils qw(clean err_msg_hr);
 use NKC::Transform::BIBFRAME2MARC;
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 
 # Test.
@@ -34,4 +34,14 @@ is($EVAL_ERROR, "Cannot read XSLT file.\n",
 $err_msg_hr = err_msg_hr(0);
 like($err_msg_hr->{'XSLT file'}, qr{bibframe2marc-bad\.xsl$},
 	"Error 'XSLT file' parameter (.. bibframe2marc-bad.xsl)");
+clean();
+
+# Test.
+eval {
+	NKC::Transform::BIBFRAME2MARC->new(
+		'version' => undef,
+	);
+};
+is($EVAL_ERROR, "Parameter version is undefined.\n",
+	"Parameter version is undefined.");
 clean();
