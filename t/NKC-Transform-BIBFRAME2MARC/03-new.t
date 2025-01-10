@@ -42,6 +42,6 @@ eval {
 		'version' => undef,
 	);
 };
-is($EVAL_ERROR, "Parameter version is undefined.\n",
-	"Parameter version is undefined.");
+is($EVAL_ERROR, "Parameter 'version' is undefined.\n",
+	"Parameter 'version' is undefined.");
 clean();

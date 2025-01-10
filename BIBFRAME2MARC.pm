@@ -28,7 +28,7 @@ sub new {
 
 	if (! defined $self->{'xslt_transformation_file'}) {
 		if (! defined $self->{'version'}) {
-			err 'Parameter version is undefined.';
+			err "Parameter 'version' is undefined.";
 		}
 		$self->{'xslt_transformation_file'} = dist_file('NKC-Transform-BIBFRAME2MARC',
 			'bibframe2marc-'.$self->{'version'}.'.xsl');
