@@ -28,3 +28,109 @@ sub list_versions {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+NKC::Transform::BIBFRAME2MARC::Utils - Utilities for bibframe2marc transformations.
+
+=head1 SYNOPSIS
+
+ use NKC::Transform::BIBFRAME2MARC::Utils qw(list_versions);
+
+ my @versions = list_versions($dir);
+
+=head1 SUBROUTINES
+
+=head2 C<list_versions>
+
+ my @versions = list_versions($dir);
+
+Get list of installed versions of bibframe2marc transformations.
+
+C<$dir> is optional. Default value of C<$dir> variables is installation
+directory.
+
+Returns list.
+
+=head1 ERRORS
+
+ list_versions():
+         Cannot open directory.
+
+=head1 EXAMPLE
+
+=for comment filename=list_versions.pl
+
+ use strict;
+ use warnings;
+
+ use File::Temp qw(tempdir);
+ use File::Spec::Functions qw(catfile);
+ use IO::Barf qw(barf);
+ use NKC::Transform::BIBFRAME2MARC::Utils qw(list_versions);
+
+ # Temporary directory.
+ my $temp_dir = tempdir(CLEANUP => 1);
+
+ # Create test files.
+ barf(catfile($temp_dir, 'bibframe2marc-2.5.0.xsl'), '');
+ barf(catfile($temp_dir, 'bibframe2marc-2.6.0.xsl'), '');
+ barf(catfile($temp_dir, 'bibframe2marc-3.6.0.xsl'), '');
+
+ # List versions.
+ my @versions = list_versions($temp_dir);
+
+ # Print versions.
+ print join "\n", @versions;
+ print "\n";
+
+ # Output:
+ # 2.5.0
+ # 2.6.0
+ # 3.6.0
+
+=head1 DEPENDENCIES
+
+L<Error::Pure>
+L<Exporter>
+L<File::Spec::Functions>,
+L<File::Share>,
+L<Readonly>.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<NKC::Transform::BIBFRAME2MARC>
+
+TODO
+
+=back
+
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/NKC-Transform-BIBFRAME2MARC>
+
+=head1 AUTHOR
+
+Michal Josef Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+© 2024-2025 Michal Josef Špaček
+
+BSD 2-Clause License
+
+=head1 VERSION
+
+0.02
+
+=cut
