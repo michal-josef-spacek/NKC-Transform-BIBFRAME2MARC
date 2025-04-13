@@ -6,6 +6,7 @@
  - Add version() method.
  - Add tests for transform().
  - Add 'version' parameter.
+ - Improve licensing.
  - Update copyright years.
 
 0.01 2024-06-21T19:54:45+02:00

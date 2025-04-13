@@ -15,6 +15,7 @@ author_requires 'Test::Pod' => 0;
 author_requires 'Test::Pod::Coverage' => 0;
 install_share 'share';
 license 'bsd';
+# share/ directory with cc0.
 name 'NKC-Transform-BIBFRAME2MARC';
 readme_from 'BIBFRAME2MARC.pm';
 recursive_author_tests('xt');

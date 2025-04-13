@@ -24,6 +24,7 @@ share/bibframe2marc-2.8.0.xsl
 share/bibframe2marc-2.8.1.xsl
 share/bibframe2marc-2.9.0.xsl
 share/INFO
+share/LICENSE
 SIGNATURE
 t/data/ex1.bibframe
 t/NKC-Transform-BIBFRAME2MARC-Utils/01-use.t
