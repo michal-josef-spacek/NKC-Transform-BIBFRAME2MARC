@@ -109,7 +109,7 @@ L<Readonly>.
 
 =item L<NKC::Transform::BIBFRAME2MARC>
 
-TODO
+bibframe2marc transformation class.
 
 =back
 
