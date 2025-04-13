@@ -3,6 +3,7 @@
  - Add XLST transformations for newer versions.
  - Add check for XSLT file in input.
  - Add constructor test.
+ - Add documentation.
  - Add version() method.
  - Add tests for transform().
  - Add 'version' parameter.

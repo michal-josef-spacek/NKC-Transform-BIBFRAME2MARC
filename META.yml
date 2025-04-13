@@ -21,6 +21,7 @@ meta-spec:
 name: NKC-Transform-BIBFRAME2MARC
 no_index:
   directory:
+    - examples
     - inc
     - share
     - t
