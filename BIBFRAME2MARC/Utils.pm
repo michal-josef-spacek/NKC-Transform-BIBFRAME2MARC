@@ -14,7 +14,11 @@ Readonly::Array our @EXPORT_OK => qw(list_versions);
 our $VERSION = 0.02;
 
 sub list_versions {
-	my $dir = dist_dir('NKC-Transform-BIBFRAME2MARC');
+	my $dir = shift;
+
+	if (! defined $dir) {
+		$dir = dist_dir('NKC-Transform-BIBFRAME2MARC');
+	}
 
 	opendir(my $dh, $dir) or err "Cannot open directory.";
 	my @versions = sort map { -f catfile($dir, $_) && m/^bibframe2marc-(.+)\.xsl$/ms ? $1 : () } readdir($dh);
