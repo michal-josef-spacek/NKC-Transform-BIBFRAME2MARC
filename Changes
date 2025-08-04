@@ -1,4 +1,5 @@
 0.02
+ - Add 2.10.0 version of transformation.
  - Add Utils::list_versions().
  - Add XLST transformations for newer versions.
  - Add check for XSLT file in input.
