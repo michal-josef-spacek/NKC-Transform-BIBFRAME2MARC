@@ -59,14 +59,14 @@ sub version {
 }
 
 sub transform {
-	my ($self, $bf_xml) = @_;
+	my ($self, $bf_xml, @params) = @_;
 
 	my $bf_xml_input = $self->{'_xml_parser'}->load_xml('string' => $bf_xml);
 	my $style_doc = $self->{'_xml_parser'}->parse_file($self->{'xslt_transformation_file'});
 
 	my $stylesheet = $self->{'_xslt'}->parse_stylesheet($style_doc);
 
-	my $results = $stylesheet->transform($bf_xml_input);
+	my $results = $stylesheet->transform($bf_xml_input, @params);
 
 	return $stylesheet->output_string($results);
 }
@@ -89,7 +89,7 @@ NKC::Transform::BIBFRAME2MARC - bibframe2marc transformation class.
 
  my $obj = NKC::Transform::BIBFRAME2MARC->new(%params);
  my $version = $obj->version;
- my $marc_xml = $obj->transform($bf_xml);
+ my $marc_xml = $obj->transform($bf_xml, @params);
 
 =head1 METHODS
 
@@ -129,7 +129,7 @@ Returns qr{\d\.\d\.\d} version string.
 
 =head2 C<transform>
 
- my $marc_xml = $obj->transform($bf_xml);
+ my $marc_xml = $obj->transform($bf_xml, @params);
 
 Transform BIBFRAME to MARC.
 

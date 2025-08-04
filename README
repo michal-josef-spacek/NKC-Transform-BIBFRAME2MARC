@@ -6,7 +6,7 @@ SYNOPSIS
 
      my $obj = NKC::Transform::BIBFRAME2MARC->new(%params);
      my $version = $obj->version;
-     my $marc_xml = $obj->transform($bf_xml);
+     my $marc_xml = $obj->transform($bf_xml, @params);
 
 METHODS
   "new"
@@ -38,7 +38,7 @@ METHODS
     Returns qr{\d\.\d\.\d} version string.
 
   "transform"
-     my $marc_xml = $obj->transform($bf_xml);
+     my $marc_xml = $obj->transform($bf_xml, @params);
 
     Transform BIBFRAME to MARC.
 
