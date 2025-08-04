@@ -24,7 +24,7 @@
   <xsl:variable name="xslProcessor">
     <xsl:value-of select="system-property('xsl:vendor')"/>
   </xsl:variable>
-  <xsl:variable name="vCurrentVersion">DLC bibframe2marc v2.7.0</xsl:variable>
+  <xsl:variable name="vCurrentVersion">DLC bibframe2marc v2.9.0</xsl:variable>
   <xsl:variable name="df880script">
     <script xmlns:bf2marc="http://www.loc.gov/bf2marc">
       <lang>arab</lang>
