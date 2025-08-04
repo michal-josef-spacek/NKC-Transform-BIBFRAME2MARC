@@ -21,7 +21,13 @@ sub list_versions {
 	}
 
 	opendir(my $dh, $dir) or err "Cannot open directory.";
-	my @versions = sort map { -f catfile($dir, $_) && m/^bibframe2marc-(.+)\.xsl$/ms ? $1 : () } readdir($dh);
+	my @versions = sort {
+			my ($a1, $a2, $a3) = split m/\./ms, $a;
+			my ($b1, $b2, $b3) = split m/\./ms, $b;
+			$a1 <=> $b1 or $a2 <=> $b2 or $a3 <=> $b3;
+		}
+		map { -f catfile($dir, $_) && m/^bibframe2marc-(.+)\.xsl$/ms ? $1 : () }
+		readdir($dh);
 	closedir($dh);
 
 	return @versions;
