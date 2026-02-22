@@ -22,4 +22,4 @@ $obj = NKC::Transform::BIBFRAME2MARC->new(
 	'version' => '2.10.0',
 );
 $ret = $obj->version;
-is($ret, '2.10.0', 'Get version (2.10.0).');
+is($ret, '2.10', 'Get version (2.10).');
