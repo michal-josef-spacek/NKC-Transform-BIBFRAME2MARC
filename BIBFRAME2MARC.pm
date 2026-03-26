@@ -177,6 +177,10 @@ L<XML::LibXSLT>.
 
 =over
 
+=item L<Biblio::BF2MARC>
+
+Convert BIBFRAME RDF to MARC
+
 =item L<NKC::Transform::MARC2BIBFRAME>
 
 marc2bibframe transformation class.
