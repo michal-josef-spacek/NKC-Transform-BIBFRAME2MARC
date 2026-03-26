@@ -2,7 +2,6 @@ TODO
 ====
 5. Add EXAMPLE to doc for transformation.
 7. Add test with expected results.
-8. Add v3.0
 9.
 
 Applied
@@ -21,3 +20,6 @@ OK [20250413] skim
 
 6. Add information about Czech National Library to doc.
 OK [20260222] skim
+
+8. Add v3.0
+OK [20260326] skim

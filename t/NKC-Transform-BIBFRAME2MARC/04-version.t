@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 use NKC::Transform::BIBFRAME2MARC;
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
 # Test.
@@ -23,3 +23,10 @@ $obj = NKC::Transform::BIBFRAME2MARC->new(
 );
 $ret = $obj->version;
 is($ret, '2.10', 'Get version (2.10).');
+
+# Test.
+$obj = NKC::Transform::BIBFRAME2MARC->new(
+	'version' => '3.0.0',
+);
+$ret = $obj->version;
+is($ret, '3.0.0', 'Get version (3.0.0).');

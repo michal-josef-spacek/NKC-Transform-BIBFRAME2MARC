@@ -17,6 +17,7 @@ is_deeply(
 		'2.6.0',
 		'2.7.0',
 		'2.9.0',
+		'3.0.0',
 	],
 	'Fetch list of versions.',
 );
