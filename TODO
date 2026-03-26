@@ -1,7 +1,6 @@
 TODO
 ====
 5. Add EXAMPLE to doc for transformation.
-7. Add test with expected results.
 9.
 
 Applied
@@ -22,4 +21,7 @@ OK [20250413] skim
 OK [20260222] skim
 
 8. Add v3.0
+OK [20260326] skim
+
+7. Add test with expected results.
 OK [20260326] skim

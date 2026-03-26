@@ -1,5 +1,6 @@
 0.03
  - Add 3.0.0 version of transformation.
+ - Add transformation tests.
 
 0.02 2026-03-26T21:23:15+01:00
  - Add 2.10.0 version of transformation.
