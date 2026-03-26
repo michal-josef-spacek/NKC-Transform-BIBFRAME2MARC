@@ -30,6 +30,9 @@ share/bibframe2marc-3.0.0.xsl
 share/INFO
 share/LICENSE
 SIGNATURE
+t/data/ex1-2.10.0.marcxml
+t/data/ex1-2.6.0.marcxml
+t/data/ex1-3.0.0.marcxml
 t/data/ex1.bibframe
 t/data/xsl_files/bibframe2marc-2.6.0.xsl
 t/data/xsl_files/bibframe2marc-2.7.0.xsl
