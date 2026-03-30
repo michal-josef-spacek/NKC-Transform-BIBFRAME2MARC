@@ -68,7 +68,7 @@ EXAMPLE
      print $version."\n";
 
      # Output:
-     # 2.6.0
+     # 3.0.0
 
 DEPENDENCIES
     Class::Utils, Error::Pure, File::Share, XML::LibXML, XML::LibXSLT.

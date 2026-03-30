@@ -163,7 +163,7 @@ Returns MARC XML string.
  print $version."\n";
 
  # Output:
- # 2.6.0
+ # 3.0.0
 
 =head1 DEPENDENCIES
 
